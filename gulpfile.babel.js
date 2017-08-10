@@ -5,6 +5,7 @@ var webpackCfg = require('./webpack.config.js');
 
 gulp.task('watch', function () {
   gulp.watch('src/*.js', ['build:js']);
+  gulp.watch('src/components/*.vue', ['build:js']);
 });
 
 gulp.task('build:js', function () {

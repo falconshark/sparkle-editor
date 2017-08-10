@@ -1,20 +1,11 @@
 <template>
    <div id="app">
-     <vue-editor v-model="content"></vue-editor>
+    <vue-html5-editor :content="content" :height="500"></vue-html5-editor>
    </div>
  </template>
 
  <script>
-   import { VueEditor } from 'vue2-editor';
-   export default {
-	   components: {
-		   VueEditor
-	   },
+ export default {
 
-	   data() {
-		   return {
-			   content: '<h1>Some initial content</h1>'
-		   }
-	   }
-   }
+ }
    </script>
