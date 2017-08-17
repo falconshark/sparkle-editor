@@ -1,3 +1,10 @@
+.toolbar-trigger{
+    position: absolute;
+    right: 0;
+    width: 432px;
+    height: 37px;
+}
+
 #sparkle-editor{
     .vue-html5-editor{
       position: fixed !important;
@@ -6,11 +13,6 @@
       bottom: 0 !important;
       right: 0 !important;
       border-radius: 0;
-    }
-
-    .toolbar-trigger{
-        height: 40px;
-        width: 432px;
     }
 
     .toolbar{
