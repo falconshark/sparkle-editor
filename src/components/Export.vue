@@ -1,15 +1,21 @@
 <template>
-  <div>
-    <textarea rows="4" cols="50">
+  <div class="export-css">
+    <div class="description">
+      你可以複製此代碼並貼上至任何網站編輯器（例如艾比索）以匯出此文章。
+    </div>
+    <div class="export-css-code">
       {{content}}
-    </textarea>
+    </div>
   </div>
+
 </template>
 
 <script>
 export default {
-  data: function () {
-    return { content: '' };
-  }
+  computed: {
+    content: function(){
+      return this.$store.state.content;
+    }
+  },
 }
 </script>

@@ -29,4 +29,17 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+    .export-css{
+      text-align: left;
+
+      .description{
+        margin-bottom: 1em;
+      }
+
+      .export-css-code{
+        border: 1px solid #ccc;
+        padding: 5px 15px 10px;
+      }
+    }
 }
