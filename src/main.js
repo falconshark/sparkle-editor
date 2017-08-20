@@ -3,6 +3,8 @@ import Vuex from 'vuex';
 import VueHtml5Editor from 'vue-html5-editor';
 import Editor from './components/Editor.vue';
 import Export from'./components/Export.vue';
+import Themes from './components/Themes.vue';
+import Info from './components/Info.vue';
 
 Vue.use(Vuex);
 Vue.use(VueHtml5Editor, {
@@ -59,11 +61,13 @@ Vue.use(VueHtml5Editor, {
     'link',
     'unlink',
     'tabulation',
-    'image',
     'hr',
+    'image',
     'eraser',
     'undo',
+    'themes',
     'export',
+    'author-info'
   ],
   modules: [
     {
@@ -73,16 +77,31 @@ Vue.use(VueHtml5Editor, {
       show: true,
       dashboard: Export
     },
+    {
+      name: 'themes',
+      icon: 'fa fa-paint-brush',
+      i18n: 'themes',
+      show: true,
+      dashboard: Themes
+    },
+    {
+      name: 'author-info',
+      icon: 'fa fa-info',
+      i18n: 'info',
+      show: true,
+      dashboard: Info
+    }
   ]
 });
 
 const store = new Vuex.Store({
   state: {
-    content: '寫作由此開始',
+    content: '<h1>寫作由此開始</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
+    output: '<h1>寫作由此開始</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
   },
   mutations: {
-    updateContent (state, content) {
-      state.content = content;
+    updateOutput (state, content) {
+      state.output = content;
     }
   }
 })

@@ -10,7 +10,6 @@
   <title>Sparkle - Online Editor</title>
 </head>
 <body>
-    <div class="toolbar-trigger">
     <div id="sparkle-editor">
         <Editor></Editor>
     </div>
@@ -22,20 +21,5 @@
     </script>
 
     <script src="dist/bundle.js"></script>
-
-    <script>
-    $('.toolbar-trigger').hover(showToolbar);
-    $('.content').on('click', hiddenToolbar);
-
-    function showToolbar(){
-        $('.toolbar').removeClass('animated slideOutUp');
-        $('.toolbar').addClass('animated slideInDown');
-    }
-
-    function hiddenToolbar(){
-        $('.toolbar').removeClass('animated slideInDown');
-        $('.toolbar').addClass('animated slideOutUp');
-    }
-    </script>
 </body>
 </html>

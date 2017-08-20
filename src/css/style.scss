@@ -19,13 +19,18 @@
         position: absolute !important;
         right: 0;
         text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    .dashboard{
+      border: 1px solid #ddd !important;
     }
 
     .content{
       width: 100%;
       height: 100%;
-      color: white;
-      background-image: url('https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/old-1130743_960_720.jpg');
+      color: black;
+      background-image: url('https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/402549-white.jpg');
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -40,6 +45,31 @@
       .export-css-code{
         border: 1px solid #ccc;
         padding: 5px 15px 10px;
+      }
+    }
+
+    .config-themes{
+      text-align: left;
+
+      .theme{
+        display: inline-block;
+        margin-right: 1em;
+        vertical-align: top;
+        text-align: center;
+      }
+
+      .theme-preview{
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ccc;
+        padding: 1px 1px 1px;
+      }
+
+      .theme-preview-pic{
+        overflow: hidden;
+        width:100%;
+        height:100%;
+        object-fit: cover;
       }
     }
 }

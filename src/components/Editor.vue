@@ -1,5 +1,5 @@
 <template>
-    <vue-html5-editor :content="content" :height="500"  @change="updateContent"></vue-html5-editor>
+    <vue-html5-editor :content="content" :height="500"  @change="updateOutput"></vue-html5-editor>
 </template>
 
 <script>
@@ -10,13 +10,9 @@ export default {
     }
   },
   methods:{
-    updateContent: function(content) {
-      this.$store.commit('updateContent', content);
+    updateOutput: function(content) {
+      this.$store.commit('updateOutput', content);
     },
-    getData: function(){
-      const content = this.content;
-      return content;
-    }
   }
 }
 </script>

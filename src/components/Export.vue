@@ -7,14 +7,13 @@
       {{content}}
     </div>
   </div>
-
 </template>
 
 <script>
 export default {
   computed: {
     content: function(){
-      return this.$store.state.content;
+      return this.$store.state.output;
     }
   },
 }

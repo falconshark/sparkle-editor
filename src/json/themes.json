@@ -1,9 +1,18 @@
 {
   "themes":[
     {
-      "name": "white",
-      "background-image": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/old-1130743_960_720.jpg'",
-      "text-color": "black"
+      "id": "1",
+      "name": "白色",
+      "background": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/402549-white.jpg'",
+      "preview": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/preview/402549-white-preview.jpg",
+      "color": "black"
+    },
+    {
+      "id": "2",
+      "name": "書桌",
+      "background": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/old-1130743_960_720.jpg",
+      "preview": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/preview/old-1130743_960_720-preview.jpg",
+      "color": "white"
     }
   ]
 }
