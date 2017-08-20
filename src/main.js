@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueHtml5Editor from 'vue-html5-editor';
-import editor from './components/editor.vue';
+import Editor from './components/Editor.vue';
+import Export from'./components/Export.vue';
 
 Vue.use(VueHtml5Editor, {
     visibleModules: [
@@ -23,9 +24,7 @@ Vue.use(VueHtml5Editor, {
             icon: "fa fa-share",
             i18n: "export",
             show: true,
-            handler: function (editor) {
-
-            },
+            dashboard: Export
         },
     ]
 });
@@ -33,7 +32,7 @@ Vue.use(VueHtml5Editor, {
 new Vue({
     el: '#sparkle-editor',
     components: {
-        editor
+        Editor
     }
 })
 
