@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
     <vue-html5-editor :content="content" :height="500"  @change="updateContent"></vue-html5-editor>
-  </div>
 </template>
 
 <script>
