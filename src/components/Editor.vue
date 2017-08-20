@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <vue-html5-editor :content="content" :height="500"  @change="updateData"></vue-html5-editor>
+    <vue-html5-editor :content="content" :height="500"  @change="updateContent"></vue-html5-editor>
   </div>
 </template>
 
 <script>
 export default {
-  data: function(){
-    return {
-      content: '寫作由此開始'
+  computed: {
+    content: function(){
+      return this.$store.state.content;
     }
   },
   methods:{
-    updateData: function(data) {
-      this.content = data;
+    updateContent: function(content) {
+      this.$store.commit('updateContent', content);
     },
     getData: function(){
       const content = this.content;

@@ -1,8 +1,10 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
 import VueHtml5Editor from 'vue-html5-editor';
 import Editor from './components/Editor.vue';
 import Export from'./components/Export.vue';
 
+Vue.use(Vuex);
 Vue.use(VueHtml5Editor, {
     visibleModules: [
         'text',
@@ -29,23 +31,21 @@ Vue.use(VueHtml5Editor, {
     ]
 });
 
+const store = new Vuex.Store({
+  state: {
+    content: '寫作由此開始',
+  },
+  mutations: {
+    updateContent (state, content) {
+      state.content = content;
+    }
+  }
+})
+
 new Vue({
     el: '#sparkle-editor',
+    store,
     components: {
         Editor
     }
-})
-
-$('.toolbar-trigger').hover(showToolbar);
-$('.content').on('click', hiddenToolbar);
-
-function showToolbar(){
-    $('.toolbar').removeClass('animated slideOutUp');
-    $('.toolbar').addClass('animated slideInDown');
-    $('.toolbar').css('opacity', '1');
-}
-
-function hiddenToolbar(){
-    $('.toolbar').removeClass('animated slideInDown');
-    $('.toolbar').addClass('animated slideOutUp');
-}
+});
