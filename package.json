@@ -4,6 +4,7 @@
         "watch": "./node_modules/.bin/gulp watch"
     },
     "dependencies": {
+        "json-loader": "^0.5.7",
         "vue": "^2.3.4",
         "vue-html5-editor": "^1.1.1",
         "vuex": "^2.3.1"

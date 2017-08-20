@@ -1,0 +1,9 @@
+{
+  "themes":[
+    {
+      "name": "white",
+      "background-image": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/old-1130743_960_720.jpg'",
+      "text-color": "black"
+    }
+  ]
+}
