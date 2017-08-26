@@ -5,14 +5,35 @@
       "name": "白色",
       "background": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/402549-white.jpg'",
       "preview": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/preview/402549-white-preview.jpg",
-      "color": "black"
+      "fontColor": "black"
     },
     {
       "id": "2",
+      "name": "黑色",
+      "background": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/black.jpg",
+      "preview": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/preview/black-preview.jpg",
+      "fontColor": "white"
+    },
+    {
+      "id": "3",
       "name": "書桌",
       "background": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/old-1130743_960_720.jpg",
       "preview": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/preview/old-1130743_960_720-preview.jpg",
-      "color": "white"
+      "fontColor": "white"
+    },
+    {
+      "id":"4",
+      "name":"日出",
+      "background":"https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/9884.jpg",
+      "preview": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/preview/9884-preview.jpg",
+      "fontColor": "white"
+    },
+    {
+      "id":"5",
+      "name":"夜空",
+      "background":"https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/118257.png",
+      "preview": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/preview/118257-preview.jpg",
+      "fontColor": "white"
     }
   ]
 }

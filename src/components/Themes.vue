@@ -29,7 +29,9 @@ export default {
       const themes = Themes['themes'];
       const themesIndex = themes.findIndex((theme => theme.id === selectedTheme));
       const bgLink = themes[themesIndex].background;
-      const textColor = themes[themesIndex].color;
+      const textColor = themes[themesIndex].fontColor;
+      const bgRepeat = themes[themesIndex].bgRepeat;
+
       $('.content').css('background-image', 'url("' + bgLink + '")');
       $('.content').css('color', textColor);
     }
