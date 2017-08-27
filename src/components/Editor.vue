@@ -6,11 +6,15 @@
 export default {
   computed: {
     content: function(){
+      if(localStorage.savedContent){
+        return localStorage.savedContent;
+      }
       return this.$store.state.content;
     }
   },
   methods:{
     updateOutput: function(content) {
+      localStorage.setItem('savedContent', content);
       this.$store.commit('updateOutput', content);
     },
   }

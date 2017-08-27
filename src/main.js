@@ -7,6 +7,19 @@ import Themes from './components/Themes.vue';
 import Info from './components/Info.vue';
 
 Vue.use(Vuex);
+
+const store = new Vuex.Store({
+  state: {
+    content: '<h1>寫作由此開始</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
+    output: '<h1>寫作由此開始</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
+  },
+  mutations: {
+    updateOutput (state, content) {
+      state.output = content;
+    }
+  }
+})
+
 Vue.use(VueHtml5Editor, {
   language: 'zh-tw',
   i18n: {
@@ -50,7 +63,8 @@ Vue.use(VueHtml5Editor, {
       'reset': '重置',
       'hr': '水平線',
       'line height': '行距',
-      'export': '匯出'
+      'export': '匯出',
+      'save':'儲存'
     }
   },
   visibleModules: [
@@ -65,6 +79,7 @@ Vue.use(VueHtml5Editor, {
     'image',
     'eraser',
     'undo',
+    'save',
     'themes',
     'export',
     'author-info'
@@ -90,21 +105,21 @@ Vue.use(VueHtml5Editor, {
       i18n: 'info',
       show: true,
       dashboard: Info
+    },
+
+    /*
+    {
+      name: 'save',
+      icon: 'fa fa-floppy-o',
+      i18n: 'save',
+      show: true,
+      handler: function (editor) {
+
+      },
     }
+    */
   ]
 });
-
-const store = new Vuex.Store({
-  state: {
-    content: '<h1>寫作由此開始</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
-    output: '<h1>寫作由此開始</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
-  },
-  mutations: {
-    updateOutput (state, content) {
-      state.output = content;
-    }
-  }
-})
 
 new Vue({
   el: '#sparkle-editor',
