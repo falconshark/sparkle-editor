@@ -78,7 +78,6 @@ Vue.use(VueHtml5Editor, {
     'hr',
     'image',
     'eraser',
-    'undo',
     'save',
     'themes',
     'export',
@@ -106,18 +105,6 @@ Vue.use(VueHtml5Editor, {
       show: true,
       dashboard: Info
     },
-
-    /*
-    {
-      name: 'save',
-      icon: 'fa fa-floppy-o',
-      i18n: 'save',
-      show: true,
-      handler: function (editor) {
-
-      },
-    }
-    */
   ]
 });
 
