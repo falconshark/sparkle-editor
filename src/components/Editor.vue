@@ -7,7 +7,9 @@ export default {
   computed: {
     content: function(){
       if(localStorage.savedContent){
-        return localStorage.savedContent;
+        const content = localStorage.savedContent;
+        this.$store.commit('updateOutput', content);
+        return content;
       }
       return this.$store.state.content;
     }
