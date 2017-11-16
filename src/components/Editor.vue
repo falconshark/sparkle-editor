@@ -3,7 +3,21 @@
 </template>
 
 <script>
+import Themes from '../json/themes.json';
+
 export default {
+  mounted: function(){
+    if(localStorage.selectedTheme){
+      const themes = Themes['themes'];
+      const selectedTheme = localStorage.selectedTheme;
+      const themesIndex = themes.findIndex((theme => theme.id === selectedTheme));
+      const bgLink = themes[themesIndex].background;
+      const textColor = themes[themesIndex].fontColor;
+      const bgRepeat = themes[themesIndex].bgRepeat;
+      $('.content').css('background-image', 'url("' + bgLink + '")');
+      $('.content').css('color', textColor);
+    }
+  },
   computed: {
     content: function(){
       if(localStorage.savedContent){

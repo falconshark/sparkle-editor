@@ -16,7 +16,6 @@
 
 <script>
 import Themes from '../json/themes.json';
-
 export default {
   data: function(){
     return {
@@ -31,6 +30,8 @@ export default {
       const bgLink = themes[themesIndex].background;
       const textColor = themes[themesIndex].fontColor;
       const bgRepeat = themes[themesIndex].bgRepeat;
+
+      localStorage.setItem('selectedTheme', selectedTheme);
 
       $('.content').css('background-image', 'url("' + bgLink + '")');
       $('.content').css('color', textColor);

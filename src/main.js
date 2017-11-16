@@ -10,12 +10,15 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    content: '<h1>寫作由此開始</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
-    output: '<h1>寫作由此開始</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
+    content: '<h1>Sparkle Editor</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
+    output: '<h1>歡迎來到Sparkle Editor</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
   },
   mutations: {
     updateOutput (state, content) {
       state.output = content;
+    },
+    saveThemeSetting (state, theme){
+      state.currentTheme = theme;
     }
   }
 })
@@ -68,8 +71,8 @@ Vue.use(VueHtml5Editor, {
     }
   },
   visibleModules: [
-    'text',
     'font',
+    'text',
     'align',
     'list',
     'link',
@@ -86,7 +89,7 @@ Vue.use(VueHtml5Editor, {
   modules: [
     {
       name: 'export',
-      icon: 'fa fa-paper-plane',
+      icon: 'fa fa-external-link',
       i18n: 'export',
       show: true,
       dashboard: Export
