@@ -8,10 +8,11 @@ import Info from './components/Info.vue';
 
 Vue.use(Vuex);
 
+
 const store = new Vuex.Store({
   state: {
-    content: '<h1>Sparkle Editor</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
-    output: '<h1>歡迎來到Sparkle Editor</h1>清除這裡的內容後，開始寫作吧！<br><br> ',
+    content: '<div style="font-size:18px">歡迎來到Sparkle Editor</div>',
+    output: '<div style="font-size:18px">歡迎來到Sparkle Editor</div>',
   },
   mutations: {
     updateOutput (state, content) {
@@ -25,6 +26,7 @@ const store = new Vuex.Store({
 
 Vue.use(VueHtml5Editor, {
   language: 'zh-tw',
+  showModuleName: true,
   i18n: {
     'zh-tw': {
       'align': '對齊',
@@ -67,7 +69,8 @@ Vue.use(VueHtml5Editor, {
       'hr': '水平線',
       'line height': '行距',
       'export': '匯出',
-      'save':'儲存'
+      'save':'儲存',
+      'themes':'主題',
     }
   },
   visibleModules: [

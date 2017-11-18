@@ -16,6 +16,7 @@
 
 <script>
 import Themes from '../json/themes.json';
+
 export default {
   data: function(){
     return {

@@ -34,6 +34,13 @@
       "background":"https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/118257.png",
       "preview": "https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/preview/118257-preview.jpg",
       "fontColor": "white"
+    },
+    {
+      "id":"6",
+      "name":"雪原",
+      "background":"https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/background/0e33407e3d59.png",
+      "preview":"https://s3-ap-southeast-1.amazonaws.com/sparkle-editor/preview/0e33407e3d59-preview.jpg",
+      "fontColor":"black"
     }
   ]
 }
